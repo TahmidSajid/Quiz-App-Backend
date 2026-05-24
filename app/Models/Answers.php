@@ -13,6 +13,6 @@ class Answers extends Model
 
     protected $casts = [
         'user_id' => 'string',
-        'answer'  => 'object',
+        'answers'  => 'object',
     ];
 }
