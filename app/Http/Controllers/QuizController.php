@@ -34,7 +34,7 @@ class QuizController extends Controller
         try {
             Answers::create([
                 'user_id' => auth()->user()->id,
-                'answers' => json_encode($validated),
+                'answers' => $validated,
             ]);
         } catch (Exception $e) {
             return Response::error('Something Went Wrong! Please Try Again', []);
@@ -81,6 +81,6 @@ class QuizController extends Controller
             ];
         });
 
-        return Response::success('Result List Fetched Successfully',[$enriched]);
+        return Response::success('Result List Fetched Successfully',$enriched);
     }
 }

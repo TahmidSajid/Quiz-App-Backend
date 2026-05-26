@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::controller(QuizController::class)->group(function(){
         Route::get('questions','getQuestion');
         Route::post('answers','saveAnswers');
-        Route::post('results','getResults');
+        Route::get('results','getResults');
     });
 
 });
